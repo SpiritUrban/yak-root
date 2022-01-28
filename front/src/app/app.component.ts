@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'yak-root-front';
+
+  links = [
+    {link: 'http://localhost:3000/doge/1.jpg', title: 'Pic from public of backend: public/doge/1.jpg'},
+    {link: 'http://localhost:3000/doge/2.jpg', title: 'Pic from public of backend: public/doge/2.jpg'},
+    {link: 'http://localhost:3000/doge/3.jpg', title: 'Pic from public of backend: public/doge/3.jpg'},
+  ];
 }
