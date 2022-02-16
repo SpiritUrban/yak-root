@@ -9,13 +9,15 @@ import { P404Component } from './p404/p404.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSliderModule } from '@angular/material/slider';
+import { DevComponent } from './dev/dev.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     XComponent,
     MainComponent,
-    P404Component
+    P404Component,
+    DevComponent
   ],
   imports: [
     BrowserModule,
