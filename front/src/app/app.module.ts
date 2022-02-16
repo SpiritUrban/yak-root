@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { XComponent } from './x/x.component';
 import { MainComponent } from './main/main.component';
 import { P404Component } from './p404/p404.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { P404Component } from './p404/p404.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
