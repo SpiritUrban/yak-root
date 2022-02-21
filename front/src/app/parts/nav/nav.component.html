@@ -7,21 +7,23 @@
                fixedInViewport>
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a href="#" mat-list-item>Link 1</a>
-      <a href="#" mat-list-item>Link 2</a>
-      <a href="#" mat-list-item>Link 3</a>
+      <!-- <a mat-list-item (click)="drawer.toggle()" routerLink="/main">Main</a> -->
+      <a (click)="goTo('/main', drawer)" mat-list-item>Main</a>
+      <a (click)="goTo('/x', drawer)" mat-list-item>X page</a>
+      <a (click)="goTo('/dev', drawer)" mat-list-item>Dev</a>
     </mat-nav-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
     <mat-toolbar color="primary">
+      <!-- *ngIf="isHandset$ | async" -->
       <button (click)="drawer.toggle()"
-              *ngIf="isHandset$ | async"
               aria-label="Toggle sidenav"
               mat-icon-button
               type="button">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
+
       <span>Yak Root</span>
       <span class="example-spacer"></span>
       <button aria-label="Example icon-button with heart icon"
