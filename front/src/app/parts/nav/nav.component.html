@@ -20,7 +20,18 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>yak-root-front</span>
+      <span>Yak Root</span>
+      <span class="example-spacer"></span>
+        <button aria-label="Example icon-button with heart icon"
+                class="example-icon favorite-icon"
+                mat-icon-button>
+            <mat-icon>favorite</mat-icon>
+        </button>
+        <button aria-label="Example icon-button with share icon"
+                class="example-icon"
+                mat-icon-button>
+            <mat-icon>share</mat-icon>
+        </button>
     </mat-toolbar>
     <!-- Add Content Here -->
   </mat-sidenav-content>
