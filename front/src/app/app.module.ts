@@ -29,6 +29,9 @@ import { TableComponent } from './parts/table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { DashboardComponent } from './parts/dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,8 @@ import { MatSortModule } from '@angular/material/sort';
     DevComponent,
     NavComponent,
     FormComponent,
-    TableComponent
+    TableComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +63,9 @@ import { MatSortModule } from '@angular/material/sort';
     ReactiveFormsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatGridListModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
