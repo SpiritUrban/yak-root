@@ -19,6 +19,12 @@ import { NavComponent } from './parts/nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { FormComponent } from './parts/form/form.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCardModule } from '@angular/material/card';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,8 @@ import { MatListModule } from '@angular/material/list';
     MainComponent,
     P404Component,
     DevComponent,
-    NavComponent
+    NavComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,12 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     LayoutModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
