@@ -34,6 +34,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { TreeComponent } from './parts/tree/tree.component';
 import { MatTreeModule } from '@angular/material/tree';
+import { DragDropComponent } from './parts/drag-drop/drag-drop.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { MatTreeModule } from '@angular/material/tree';
     FormComponent,
     TableComponent,
     DashboardComponent,
-    TreeComponent
+    TreeComponent,
+    DragDropComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +72,8 @@ import { MatTreeModule } from '@angular/material/tree';
     MatSortModule,
     MatGridListModule,
     MatMenuModule,
-    MatTreeModule
+    MatTreeModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
