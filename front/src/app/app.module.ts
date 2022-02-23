@@ -21,6 +21,8 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
+import { HttpErrorHandler } from './core/services/http-error-handler.service';
+import { MessageService } from './core/services/message.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,10 @@ import { MatListModule } from '@angular/material/list';
     MatListModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    HttpErrorHandler,
+    MessageService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
