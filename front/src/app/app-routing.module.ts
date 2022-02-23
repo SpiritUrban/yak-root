@@ -14,6 +14,12 @@ const routes: Routes = [
     loadChildren: () => import('./features/blog/blog.module').then(m => m.BlogModule)
   },
 
+  {
+    path: 'examples',
+    loadChildren: () => import('./features/examples/examples.module').then(m => m.ExamplesModule)
+  },
+
+
   { path: 'x', component: XComponent },
   { path: 'dev', component: DevComponent },
   
