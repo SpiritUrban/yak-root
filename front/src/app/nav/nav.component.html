@@ -7,12 +7,12 @@
                fixedInViewport>
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <!-- <a mat-list-item (click)="drawer.toggle()" routerLink="/main">Main</a> -->
-      <a (click)="goTo('/main', drawer)" mat-list-item>Main</a>
-      <a (click)="goTo('/blog', drawer)" mat-list-item>Blog</a>
-      <a (click)="goTo('/examples', drawer)" mat-list-item>Examples</a>
-      <a (click)="goTo('/x', drawer)" mat-list-item>X page</a>
-      <a (click)="goTo('/dev', drawer)" mat-list-item>Dev</a>
+      <a (click)="goTo(page.url, drawer)"
+         [class]="page.url == '/' + currentPage ? 'active-nav' : ''"
+         *ngFor="let page of pages; let i = index"
+         mat-list-item>
+        {{page.title}}
+      </a>
     </mat-nav-list>
   </mat-sidenav>
 

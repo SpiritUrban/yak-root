@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Location } from "@angular/common";
 
 @Component({
   selector: 'app-nav',
@@ -17,20 +18,34 @@ export class NavComponent implements OnInit {
       shareReplay()
     );
 
+  pages: Array<any> = [
+    { url: '/main', title: 'Main' },
+    { url: '/blog', title: 'Blog' },
+    { url: '/examples', title: 'Examples' },
+    { url: '/x', title: 'X' },
+    { url: '/dev', title: 'Dev' },
+  ];
+  currentPage: string = '';
+
   constructor(
     private breakpointObserver: BreakpointObserver,
     private router: Router,
-    private route: ActivatedRoute
-  ) { }
+    private route: ActivatedRoute,
+    location: Location,
+  ) {
+    router.events.subscribe(val => {
+      this.currentPage = location.path().split('/')[1];
+    });
+  }
 
   ngOnInit() {
     this.demo(); // Just Demo Features!
   }
 
   // Just Demo Features!
-  demo(){
+  demo() {
     setInterval(() => {
-      console.log('Demo:', window.screen.width, window.innerWidth, '💋');
+      console.log('Demo:', window.screen.width, window.innerWidth, '💋', this.router.url);
     }, 1000);
 
     this.route
