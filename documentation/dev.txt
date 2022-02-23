@@ -25,3 +25,6 @@ ng add @angular/material
 Navigation schematic:
 The navigation schematic will create a new component that includes a toolbar with the app name, and a responsive side nav based on Material breakpoints.
 ng generate @angular/material:navigation parts/nav
+
+Create module with routing:
+ng g module features/blog --routing
