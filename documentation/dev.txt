@@ -28,3 +28,5 @@ ng generate @angular/material:navigation parts/nav
 
 Create module with routing:
 ng g module features/blog --routing
+And generate pages:
+ng g component features/blog/feed
