@@ -38,7 +38,7 @@ import { TreeComponent } from './parts/tree/tree.component';
 import { MatTreeModule } from '@angular/material/tree';
 import { DragDropComponent } from './parts/drag-drop/drag-drop.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { CardComponent } from './parts/card/card.component';
+import { CardComponent } from './parts/card/card.component'; // !!!
 
 @NgModule({
   declarations: [

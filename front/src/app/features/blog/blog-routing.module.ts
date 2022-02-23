@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { CreateComponent } from './create/create.component';
-import { EditComponent } from './edit/edit.component';
-import { FeedComponent } from './feed/feed.component';
+import { CreateComponent } from './pages/create/create.component';
+import { EditComponent } from './pages/edit/edit.component';
+import { FeedComponent } from './pages/feed/feed.component';
 
 const routes: Routes = [
   {
@@ -17,7 +17,7 @@ const routes: Routes = [
     // canActivate: [NoAuthGuard]
   },
   {
-    path: 'edit',
+    path: ':id/edit',
     component: EditComponent,
     // canActivate: [NoAuthGuard]
   },
