@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from '../../blog.service';
-import { Post } from '../../interfaces/post.interface';
+import { IPost } from '../../interfaces/post.interface';
 
 @Component({
   selector: 'app-feed',
@@ -8,7 +8,7 @@ import { Post } from '../../interfaces/post.interface';
   styleUrls: ['./feed.component.sass']
 })
 export class FeedComponent implements OnInit {
-  posts: Post[] = [];
+  posts: IPost[] = [];
 
   constructor(
     public blogService: BlogService

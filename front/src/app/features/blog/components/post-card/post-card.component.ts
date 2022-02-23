@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Post } from '../../interfaces/post.interface';
+import { IPost } from '../../interfaces/post.interface';
 
 @Component({
   selector: 'app-post-card',
@@ -7,7 +7,7 @@ import { Post } from '../../interfaces/post.interface';
   styleUrls: ['./post-card.component.sass']
 })
 export class PostCardComponent implements OnInit {
-  @Input() post: Post = {
+  @Input() post: IPost = {
     title: '...',
     description: '...',
     body: '...',

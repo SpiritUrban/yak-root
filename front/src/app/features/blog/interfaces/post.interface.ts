@@ -1,7 +1,7 @@
-export interface Post {
-    readonly title: string;
-    readonly description: string;
-    readonly body: string;
-    readonly author: string;
-    readonly date_posted: string
+export interface IPost {
+    title: string;
+    description: string;
+    body: string;
+    author: string;
+    date_posted: string
 }
