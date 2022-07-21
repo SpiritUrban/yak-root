@@ -24,7 +24,7 @@ export class BlogService {
     private http: HttpClient,
     httpErrorHandler: HttpErrorHandler
   ) {
-    this.handleError = httpErrorHandler.createHandleError('HeroesService');
+    this.handleError = httpErrorHandler.createHandleError('BlogService');
   }
 
   /** GET posts from the server */
